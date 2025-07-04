@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex - ITI-523</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body> 
+
+    <div class="hamburger-container">
+  <button id="hamburgerBtn" aria-label="Abrir menú" aria-controls="hamburgerMenu" aria-expanded="false">
+    ☰
+  </button>
+  <nav id="hamburgerMenu" class="hamburger-dropdown hidden" role="menu">
+    <ul>
+      <li role="menuitem"><a href="entrenadores.html">Entrenadores</a></li>
+      <li role="menuitem"><a href="agregar-entrenador.html">Agregar Entrenador</a></li>
+      <li role="menuitem"><a href="equipo.html">Equipo</a></li>
+      <li role="menuitem"><a href="agregar-equipo.html">Agregar Equipo</a></li>
+    </ul>
+  </nav>
+</div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container py-3">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="logo mb-0">
+                        <i class="fas fa-dragon"></i> Pokédex
+                    </h1>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0"><strong>Entrenador:</strong> TheKev</p>
+                    <p class="mb-0"><strong>Fecha:</strong> 27 de Junio, 2025</p>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Generation Selector -->
+        <div class="generation-selector">
+            <h3 class="text-center mb-3">
+                <i class="fas fa-layer-group"></i> Seleccionar Generación
+            </h3>
+            <div class="text-center">
+                <button class="btn btn-outline-primary generation-btn active" data-generation="1" data-offset="0" data-limit="151">
+                    Primera Generación (001-151)
+                </button>
+                <button class="btn btn-outline-primary generation-btn" data-generation="2" data-offset="151" data-limit="100">
+                    Segunda Generación (152-251)
+                </button>
+                <button class="btn btn-outline-primary generation-btn" data-generation="3" data-offset="251" data-limit="135">
+                    Tercera Generación (252-386)
+                </button>
+                <button class="btn btn-outline-primary generation-btn" data-generation="4" data-offset="386" data-limit="107">
+                    Cuarta Generación (387-493)
+                </button>
+                <button class="btn btn-outline-primary generation-btn" data-generation="5" data-offset="493" data-limit="156">
+                    Quinta Generación (494-649)
+                </button>
+            </div>
+        </div>
+
+        <!-- Pokemon Grid -->
+        <div id="pokemon-container">
+            <div class="loading">
+                <div class="spinner"></div>
+                <h4>Cargando Pokémon...</h4>
+                <p>Obteniendo datos de la API</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pokemon Detail Modal -->
+    <div class="modal fade" id="pokemonModal" tabindex="-1" aria-labelledby="pokemonModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pokemonModalLabel">
+                        <i class="fas fa-info-circle"></i> Detalles del Pokémon
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="pokemon-details">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <h4>Cargando detalles...</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script> 
+    <script src="menu-hamburguesa.js"></script>
+</body>
+</html>

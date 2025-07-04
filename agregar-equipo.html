@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agregar Equipo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/db.js" defer></script>
+  <script src="js/agregar-equipo.js" defer></script>
+<script src="script.js"></script>
+</head>
+<body>
+
+<div class="hamburger-container">
+  <button id="hamburgerBtn" aria-label="Abrir menú" aria-controls="hamburgerMenu" aria-expanded="false">
+    ☰
+  </button>
+  <nav id="hamburgerMenu" class="hamburger-dropdown hidden" role="menu">
+    <ul>
+      <li role="menuitem"><a href="index.html">Inicio</a></li>
+      <li role="menuitem"><a href="entrenadores.html">Entrenadores</a></li>
+      <li role="menuitem"><a href="agregar-entrenador.html">Agregar Entrenador</a></li>
+      <li role="menuitem"><a href="equipo.html">Equipo</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+
+  <main class="container mt-4">
+    <h2>Crear Equipo Pokémon</h2>
+    <form id="formEquipo">
+      <input class="form-control mb-2" type="text" name="nombre" placeholder="Nombre del equipo" required>
+      <input class="form-control mb-2" type="url" name="imagen" placeholder="Imagen del grupo (URL)" required>
+      <select class="form-select mb-2" name="entrenador" id="entrenadorSelect" required></select>
+      <input class="form-control mb-2" type="text" name="pokemones" placeholder="pokémon1, pokémon2, ..." required>
+      <button class="btn btn-success" type="submit">Guardar Equipo</button>
+    </form>
+  </main>
+</body>
+</html>

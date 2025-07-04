@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agregar Entrenador</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/db.js" defer></script>
+  <script src="js/agregar-entrenador.js" defer></script>
+  <script src="script.js"></script>
+</head>
+<body>
+
+<div class="hamburger-container">
+  <button id="hamburgerBtn" aria-label="Abrir menú" aria-controls="hamburgerMenu" aria-expanded="false">
+    ☰
+  </button>
+  <nav id="hamburgerMenu" class="hamburger-dropdown hidden" role="menu">
+    <ul>
+      <li role="menuitem"><a href="index.html">Inicio</a></li>
+      <li role="menuitem"><a href="entrenadores.html">Entrenadores</a></li>
+      <li role="menuitem"><a href="equipo.html">Equipo</a></li>
+      <li role="menuitem"><a href="agregar-equipo.html">Agregar Equipo</a></li>
+    </ul>
+  </nav>
+</div>
+
+  <main class="container mt-4">
+    <h2>Agregar Entrenador</h2>
+    <form id="formEntrenador">
+      <input class="form-control mb-2" type="text" name="nombre" placeholder="Nombre completo" required>
+      <select class="form-select mb-2" name="sexo" required>
+        <option value="">Sexo</option>
+        <option>Masculino</option>
+        <option>Femenino</option>
+      </select>
+      <input class="form-control mb-2" type="text" name="residencia" placeholder="Residencia" required>
+      <input class="form-control mb-2" type="url" name="foto" placeholder="URL de la foto" required>
+      <button class="btn btn-primary" type="submit">Guardar</button>
+    </form>
+  </main>
+</body>
+</html>

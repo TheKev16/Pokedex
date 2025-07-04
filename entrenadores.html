@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Entrenadores</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/db.js" defer></script>
+  <script src="js/entrenadores.js" defer></script>
+  <script src="script.js"></script>
+</head>
+<body>
+
+        <div class="hamburger-container">
+  <button id="hamburgerBtn" aria-label="Abrir menú" aria-controls="hamburgerMenu" aria-expanded="false">
+    ☰
+  </button>
+  <nav id="hamburgerMenu" class="hamburger-dropdown hidden" role="menu">
+    <ul>
+      <li role="menuitem"><a href="index.html">Inicio</a></li>
+      <li role="menuitem"><a href="agregar-entrenador.html">Agregar Entrenador</a></li>
+      <li role="menuitem"><a href="equipo.html">Equipo</a></li>
+      <li role="menuitem"><a href="agregar-equipo.html">Agregar Equipo</a></li>
+    </ul>
+  </nav>
+</div>
+
+  <main class="container mt-4">
+    <h2>Lista de Entrenadores</h2>
+    <div id="listaEntrenadores" class="row"></div>
+  </main>
+</body>
+</html>
